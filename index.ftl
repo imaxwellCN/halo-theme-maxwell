@@ -11,6 +11,7 @@
         }
     </style>
     <#else>
+        <#if posts??>
         <#if posts.getTotalElements() gt 0>
         <#--首页轮播图-->
         <ul class="fsb-slider">
@@ -18,16 +19,15 @@
                 <li><span><img src="${post.thumbnail!}">${post.title!}</span></li>
             </#list>
         </ul>
-        <#else>
-    <#--无自定义背景 显示默认背景图-->
-         <style type="text/css">
-             body {
-                 background-image: url('https://www.maxwellcoding.club/image/ab0a92777c7f3831b82bbccbc9b377a7.png') !important;
-             }
-         </style>
-
         </#if>
-
+        <#else>
+        <#--无自定义背景 显示默认背景图-->
+        <style type="text/css">
+            body {
+                background-image: url('https://www.maxwellcoding.club/image/ab0a92777c7f3831b82bbccbc9b377a7.png') !important;
+            }
+        </style>
+        </#if>
     </#if>
 
 </body>
