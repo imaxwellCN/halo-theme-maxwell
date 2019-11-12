@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery全屏背景滑块幻灯片</title>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:600' rel='stylesheet' type='text/css'>
+
+
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+
+
+    <!--主要样式-->
+    <link type="text/css" href="css/full_screen_background_slider.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/fsbs.min.js"></script>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+
+            if (!Modernizr.csstransitions) {
+                $("#content").delay(500).animate({right: "-10px", opacity: "0.8"}, 3000, "easeInOutQuad");
+            }
+
+            $('.fsb-slider').fsbslider({"animation_time": 15, "animation_type": "crossfade", "pattern": false});
+
+            $(".animation_selector").click(function () {
+                $('.fsb-slider').fsbslider('destroy');
+                $('.fsb-slider').fsbslider({
+                    "animation_time": 50,
+                    "animation_type": $(this).attr("data-value"),
+                    "pattern": false
+                });
+            });
+
+            $(".pattern_selector").click(function () {
+                $('.fsb-slider').fsbslider('updatepattern', {pattern: $(this).attr("data-value")});
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+<ul class="fsb-slider">
+    <li><span><img src="images/1.jpg"></span></li>
+    <li><span><img src="images/2.jpg"></span></li>
+    <li><span><img src="images/4.jpg"></span></li>
+    <li><span><img src="images/3.jpg"></span></li>
+</ul>
+
+
+<div id="content">
+    <h3>选择动画风格</h3>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="crossfade">Crossfade</a><a
+        href="Javascript:void(0);" class="animation_selector" data-value="slidefade">SlideFade</a><a
+        href="Javascript:void(0);" class="animation_selector" data-value="rotatefade">RotateFade</a><a
+        href="Javascript:void(0);" class="animation_selector" data-value="randomslide">RandomSlide</a>
+    <br><a href="Javascript:void(0);" class="animation_selector" data-value="slidelefttoleft">Slide Left to Left</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidelefttoright">Slide Left to Right</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidelefttotop">Slide Left to Top</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidelefttobottom">Slide Left to Bottom</a>
+    <br><a href="Javascript:void(0);" class="animation_selector" data-value="sliderighttoright">Slide Right to Right</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="sliderighttoleft">Slide Right to Left</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="sliderighttotop">Slide Right to Top</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="sliderighttobottom">Slide Right to Bottom</a>
+    <br><a href="Javascript:void(0);" class="animation_selector" data-value="slidetoptotop">Slide Top to Top</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidetoptobottom">Slide Top to Bottom</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidetoptoleft">Slide Top to Left</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidetoptoright">Slide Top to Right</a>
+    <br><a href="Javascript:void(0);" class="animation_selector" data-value="slidebottomtobottom">Slide Bottom to
+    Bottom</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidebottomtotop">Slide Bottom to Top</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidebottomtoleft">Slide Bottom to Left</a>
+    <a href="Javascript:void(0);" class="animation_selector" data-value="slidebottomtoright">Slide Bottom to Right</a>
+    <h3>选择模式的风格</h3>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="disable">Disable</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern">Pattern1</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern1">Pattern2</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern2">Pattern3</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern3">Pattern4</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern4">Pattern5</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern5">Pattern6</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern6">Pattern7</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern7">Pattern8</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern8">Pattern9</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern9">Pattern10</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern10">Pattern11</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern11">Pattern12</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern12">Pattern13</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern13">Pattern14</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern14">Pattern15</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern15">Pattern16</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern16">Pattern17</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern17">Pattern18</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern18">Pattern19</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern19">Pattern20</a>
+    <a href="Javascript:void(0);" class="pattern_selector" data-value="pattern20">Pattern21</a>
+    </pre>
+</div>
+
+</body>
+</html>

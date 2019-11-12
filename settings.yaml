@@ -1,0 +1,158 @@
+general:
+  label: 基础设置
+  items:
+    ThemeStyle:
+      name: ThemeStyle
+      label: '主题风格'
+      type: radio
+      default: '1'
+      options:
+        - value: '1'
+          label: '私人定制全屏海报轮播模式'
+    BackgroundImage:
+       name: BackgroundImage
+       label: '首页静态背景图(不设置情况下默认博客缩略图轮播)'
+       type: attachment
+       placeholder: '在这里填入一个图片 URL 地址'
+    animation_selector:
+      name: animation_selector
+      label: '选择动画风格'
+      type: select
+      data-type: string
+      default: 'crossfade'
+      options:
+         - value: 'crossfade'
+           label: 'Crossfade'
+         - value: 'slidefade'
+           label: 'SlideFade'
+         - value: 'rotatefade'
+           label: 'RotateFade'
+         - value: 'randomslide'
+           label: 'RandomSlide'
+         - value: 'slidelefttoleft'
+           label: 'Slide Left to Left'
+         - value: 'slidelefttoright'
+           label: 'Slide Left to Right'
+         - value: 'slidelefttotop'
+           label: 'Slide Left to Top'
+         - value: 'slidelefttobottom'
+           label: 'Slide Left to Bottom'
+         - value: 'sliderighttoright'
+           label: 'Slide Right to Right'
+         - value: 'sliderighttoleft'
+           label: 'Slide Right to Left'
+         - value: 'sliderighttotop'
+           label: 'Slide Right to Top'
+         - value: 'sliderighttobottom'
+           label: 'Slide Right to Bottom'
+         - value: 'slidetoptotop'
+           label: 'Slide Top to Top'
+         - value: 'slidetoptobottom'
+           label: 'Slide Top to Bottom'
+         - value: 'slidetoptoleft'
+           label: 'Slide Top to Left'
+         - value: 'slidetoptoright'
+           label: 'Slide Top to Right'
+         - value: 'slidebottomtobottom'
+           label: 'Slide Bottom to Bottom'
+         - value: 'slidebottomtotop'
+           label: 'Slide Bottom to Top'
+         - value: 'slidebottomtoleft'
+           label: 'Slide Bottom to Left'
+         - value: 'slidebottomtoright'
+           label: 'Slide Bottom to Right'
+    pattern_selector:
+      name: pattern_selector
+      label: '选择模式的风格'
+      type: select
+      data-type: string
+      default: 'disable'
+      options:
+          - value: 'disable'
+            label: 'Disable'
+          - value: 'pattern'
+            label: 'Pattern1'
+          - value: 'pattern1'
+            label: 'Pattern2'
+          - value: 'pattern2'
+            label: 'Pattern3'
+          - value: 'pattern3'
+            label: 'Pattern4'
+          - value: 'pattern4'
+            label: 'Pattern5'
+          - value: 'pattern5'
+            label: 'Pattern6'
+          - value: 'pattern6'
+            label: 'Pattern7'
+          - value: 'pattern7'
+            label: 'Pattern8'
+          - value: 'pattern8'
+            label: 'Pattern9'
+          - value: 'pattern9'
+            label: 'Pattern10'
+          - value: 'pattern10'
+            label: 'Pattern11'
+          - value: 'pattern11'
+            label: 'Pattern12'
+          - value: 'pattern12'
+            label: 'Pattern13'
+          - value: 'pattern13'
+            label: 'Pattern14'
+          - value: 'pattern14'
+            label: 'Pattern15'
+          - value: 'pattern15'
+            label: 'Pattern16'
+          - value: 'pattern16'
+            label: 'Pattern17'
+          - value: 'pattern17'
+            label: 'Pattern18'
+          - value: 'pattern18'
+            label: 'Pattern19'
+          - value: 'pattern19'
+            label: 'Pattern20'
+          - value: 'pattern20'
+            label: 'Pattern21'
+    ArchivesBackgroundImage:
+       name: ArchivesBackgroundImage
+       label: 'Archives静态背景图'
+       type: attachment
+       placeholder: '在这里填入一个图片 URL 地址'
+    TimeStatistics:
+      name: TimeStatistics
+      label: '站点运行时间统计'
+      type: text
+      placeholder: '填入起始时间，格式：月/日/年 时:分:秒，如08/20/2018 12:00:00'
+    Icp:
+      name: Icp
+      label: 'ICP备案号'
+      type: text
+      placeholder: '填入ICP备案号，没有则不填'
+    PublicSecurityRecord:
+      name: PublicSecurityRecord
+      label: '网安备案号'
+      type: text
+      placeholder: '填入网安备案号代码，没有则不填'
+    QR_code_zfb:
+      name: QR_code_zfb
+      label: '支付宝二维码链接'
+      type: attachment
+      placeholder: '支付宝收款二维码链接，不填不显示'
+    QR_code_wx:
+      name: QR_code_wx
+      label: '微信二维码链接'
+      type: attachment
+      placeholder: '微信收款二维码链接，不填不显示'
+menu:
+  label: 菜单设置
+  items:
+    MenuBackgroundImage:
+      name: MenuBackgroundImage
+      label: '菜单背景图'
+      type: attachment
+      placeholder: '在这里填入一个图片 URL 地址'
+    MenuTextColor:
+      name: MenuTextColor
+      label: '菜单名称颜色'
+      type: text
+      default: '#FFFFFF'
+      placeholder: '菜单名称颜色，默认白色'
